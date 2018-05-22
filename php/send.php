@@ -1,9 +1,9 @@
 <?php
 
 include_once('bank.mellat.php');
-$terminalId		= "3514710";
-$userName		= "dig89";
-$userPassword	= "95583968";
+$terminalId		= "xxx";
+$userName		= "xxx";
+$userPassword	= "xxxx";
 $mellat = new MellatBank($terminalId, $userName, $userPassword);
 $mellat->startPayment(1000, "https://digiyadaki.com/bank/ver.php");
 
