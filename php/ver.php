@@ -1,9 +1,9 @@
 <?php
 
 include_once('bank.mellat.php');
-$terminalId		= "3514710";
-$userName		= "dig89";
-$userPassword	= "95583968";
+$terminalId		= "xxx";
+$userName		= "xxx";
+$userPassword	= "xxx";
 $mellat = new MellatBank($terminalId, $userName, $userPassword);
  $results = $mellat->checkPayment($_POST);
   if($results['status']=='success') {
