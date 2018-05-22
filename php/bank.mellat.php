@@ -1,6 +1,4 @@
 <?php
-
-require_once('nusoap.php');
 /**
  * کلاس درگاه پرداخت بانک ملت
  *
@@ -72,13 +70,13 @@ class MellatBank {
 	 * @since   2014-12-10
 	 * @author  Ahmad Rezaei <info@freescript.ir>
 	 */
-	public function startPayment($amount, $callBackUrl, $user_id = 0, $decription = '')
+	public function startPayment($amount, $callBackUrl, $order_id , $user_id = 0, $decription = '')
 	{			
 		$client = new nusoap_client( 'https://bpm.shaparak.ir/pgwchannel/services/pgw?wsdl' ) ;
 		$terminalId = $this->terminal ;
 		$userName = $this->username;
 		$userPassword = $this->password;
-		$orderId = rand(10000,99999);
+		$orderId = $order_id;
 		$amount = $amount;
 		$localDate = date('ymj');
 		$localTime = date('His');
